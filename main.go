@@ -44,12 +44,15 @@ func (game *Game) Update() error {
 }
 
 func (game *Game) Draw(image *ebiten.Image) {
-	image.Fill(color.RGBA{40, 40, 40, 255})
+	image.Fill(color.RGBA{40, 40, 30, 255})
 	game.Level.Draw(image)
 }
 
 func (game *Game) Layout(w, h int) (int, int) {
 	return game.ScreenWidth, game.ScreenHeight
+}
+func (game *Game)Delta() float64 {
+	return 1.0/ebiten.CurrentTPS()
 }
 
 func main() {
