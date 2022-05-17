@@ -8,7 +8,7 @@ import (
 type Level struct {
 	Game        *Game
 	Renderer    *renderer.EbitenRenderer
-	Player *Player
+	Player      *Player
 	GameObjects []GameObject
 }
 
@@ -22,7 +22,7 @@ func NewLevel(game *Game) *Level {
 
 	level.Renderer.Render(level.Game.LdtkProject.Levels[0])
 
-	level.Player = NewPlayer(level)
+	level.Add(NewPlayer(level))
 	return level
 }
 

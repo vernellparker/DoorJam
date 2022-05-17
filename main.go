@@ -15,6 +15,7 @@ type Game struct {
 	Level                     *Level
 	LdtkProject               *ldtkgo.Project
 	ScreenWidth, ScreenHeight int
+	Resources                 map[string]*Resources
 }
 
 func NewGame() *Game {
@@ -26,6 +27,7 @@ func NewGame() *Game {
 	game := &Game{
 		ScreenWidth:  384,
 		ScreenHeight: 216,
+		Resources:    map[string]*Resources{},
 	}
 
 	game.LdtkProject, err = ldtkgo.Open("assets/levels.ldtk")
@@ -50,9 +52,6 @@ func (game *Game) Draw(image *ebiten.Image) {
 
 func (game *Game) Layout(w, h int) (int, int) {
 	return game.ScreenWidth, game.ScreenHeight
-}
-func (game *Game)Delta() float64 {
-	return 1.0/ebiten.CurrentTPS()
 }
 
 func main() {
