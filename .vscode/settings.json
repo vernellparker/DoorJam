@@ -6,6 +6,7 @@
         "ebitenutil",
         "hajimehoshi",
         "Ldtk",
-        "ldtkgo"
+        "ldtkgo",
+        "resolv"
     ]
 }

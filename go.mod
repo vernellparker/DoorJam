@@ -8,9 +8,11 @@ require (
 	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20220320163800-277f93cfa958 // indirect
 	github.com/gofrs/flock v0.8.1 // indirect
 	github.com/jezek/xgb v1.0.0 // indirect
+	github.com/kvartborg/vector v0.0.0-20200419093813-2cba0cabb4f0 // indirect
 	github.com/solarlune/goaseprite v0.0.0-20211029194024-ab8a34ca8458 // indirect
 	github.com/solarlune/ldtkgo v0.9.3 // indirect
 	github.com/solarlune/ldtkgo/ebitenrenderer v0.0.0-20220501190146-f77e9979829a // indirect
+	github.com/solarlune/resolv v0.5.1 // indirect
 	github.com/tidwall/gjson v1.10.2 // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect

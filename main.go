@@ -5,6 +5,7 @@ import (
 	"image/color"
 
 	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/hajimehoshi/ebiten/v2/inpututil"
 	"github.com/solarlune/ldtkgo"
 )
 
@@ -16,6 +17,7 @@ type Game struct {
 	LdtkProject               *ldtkgo.Project
 	ScreenWidth, ScreenHeight int
 	Resources                 map[string]*Resources
+	Debug                     bool
 }
 
 func NewGame() *Game {
@@ -41,6 +43,16 @@ func NewGame() *Game {
 }
 
 func (game *Game) Update() error {
+
+	//Reload the level
+	if ebiten.IsKeyPressed(ebiten.KeyR) {
+		game.Level = NewLevel(game)
+	}
+	//Puts the game in Debug mode
+	if inpututil.IsKeyJustPressed(ebiten.KeyF1) {
+		game.Debug = !game.Debug
+	}
+
 	game.Level.Update()
 	return nil
 }

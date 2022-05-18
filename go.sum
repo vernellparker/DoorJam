@@ -27,6 +27,8 @@ github.com/kr/pretty v0.2.1/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfn
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/kr/text v0.1.0 h1:45sCR5RtlFHMR4UwH9sdQ5TC8v0qDQCHnXt+kaKSTVE=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
+github.com/kvartborg/vector v0.0.0-20200419093813-2cba0cabb4f0 h1:v8lWpj5957KtDMKu+xQtlu6G3ZoZR6Tn9bsfZCRG5Xw=
+github.com/kvartborg/vector v0.0.0-20200419093813-2cba0cabb4f0/go.mod h1:GAX7tMJqXx9fB1BrsTWPOXy6IBRX+J461BffVPAdpwo=
 github.com/pkg/browser v0.0.0-20180916011732-0a3d74bf9ce4/go.mod h1:4OwLy04Bl9Ef3GJJCoec+30X3LQs/0/m4HFRt/2LUSA=
 github.com/pkg/browser v0.0.0-20210911075715-681adbf594b8/go.mod h1:HKlIX3XHQyzLZPlr7++PzdhaXEj94dEiJgZDTsxEqUI=
 github.com/solarlune/goaseprite v0.0.0-20211029194024-ab8a34ca8458 h1:sjGZHLbcSdVaukn6ADAe/Oqfygp4YJkUgeKWFOoxDu8=
@@ -36,6 +38,8 @@ github.com/solarlune/ldtkgo v0.9.3 h1:pPgbO68AlhRzb9hynGoWxuZpYkmxmG0bjuFYpTdH9r
 github.com/solarlune/ldtkgo v0.9.3/go.mod h1:rpW/4FW9wOJR9JVpA67mbCfllBsg6ZvCFZnVtfokdFc=
 github.com/solarlune/ldtkgo/ebitenrenderer v0.0.0-20220501190146-f77e9979829a h1:sO+OuRrWR0tnVuf7LAtlUYavT1FLob/7ggVX3Il4MoA=
 github.com/solarlune/ldtkgo/ebitenrenderer v0.0.0-20220501190146-f77e9979829a/go.mod h1:WP0owGK42bG8iHF4BLcrTzD/iX1cX2Mf6AsFEnldPyg=
+github.com/solarlune/resolv v0.5.1 h1:Ul6PAs/zaxiMUOEYz1Z6VeUj5k3CDcWMvSh+kivybDY=
+github.com/solarlune/resolv v0.5.1/go.mod h1:HjM2f/0NoVjVdZsi26GtugX5aFbA62COEFEXkOhveRw=
 github.com/tidwall/gjson v1.6.4 h1:JKsCsJqRVFz8eYCsQ5E/ANRbK6CanAtA9IUvGsXklyo=
 github.com/tidwall/gjson v1.6.4/go.mod h1:BaHyNc5bjzYkPqgLq7mdVzeiRtULKULXLgZFKsxEHI0=
 github.com/tidwall/gjson v1.10.2 h1:APbLGOM0rrEkd8WBw9C24nllro4ajFuJu0Sc9hRz8Bo=
