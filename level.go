@@ -2,6 +2,7 @@ package main
 
 import (
 	"image/color"
+	"sort"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
@@ -48,6 +49,20 @@ func (l *Level) Load(ldtkLevel *ldtkgo.Level) {
 		obj.AddTags("solid")
 		l.Space.Add(obj)
 	}
+
+	for _, entity := range ldtkLevel.LayerByIdentifier("Entities").Entities {
+		// Places door based on the entity in ldtk
+		if entity.Identifier == "Door" {
+			door := NewDoor(l)
+			door.Object.X = float64(entity.Position[0])
+			door.Object.Y = float64(entity.Position[1])
+
+			//This adjust the door based on the pivot point
+			door.Object.X -= float64(entity.Pivot[0]) * door.Object.W
+			door.Object.Y -= float64(entity.Pivot[1]) * door.Object.H
+			l.Add(door)
+		}
+	}
 }
 
 func (l *Level) Update() {
@@ -62,8 +77,14 @@ func (l *Level) Draw(img *ebiten.Image) {
 		img.DrawImage(layer.Image, &ebiten.DrawImageOptions{})
 	}
 
-	//Renders all game objects to the screen
-	for _, g := range l.GameObjects {
+	//Depth Sorting GameObjects
+	sorted := append([]GameObject{}, l.GameObjects...)
+	sort.Slice(sorted, func(i, j int) bool {
+		return sorted[i].Depth() > sorted[j].Depth()
+	})
+
+	//Renders all game objects to the screen based pm sorted layers
+	for _, g := range sorted {
 		g.Draw(img)
 	}
 

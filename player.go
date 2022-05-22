@@ -89,14 +89,14 @@ func (p *Player) Draw(img *ebiten.Image) {
 	} else {
 		anim = "idle"
 	}
+	p.Aseprite.Play(anim)
 
+	//Used for flipping the image.
 	if p.DeltaX < 0 {
 		p.Flipped = true
 	} else if p.DeltaX > 0 {
 		p.Flipped = false
 	}
-
-	p.Aseprite.Play(anim)
 
 	sub := p.Sprite.SubImage(image.Rect(p.Aseprite.CurrentFrameCoords()))
 	options := &ebiten.DrawImageOptions{}
@@ -112,4 +112,8 @@ func (p *Player) Draw(img *ebiten.Image) {
 	options.GeoM.Translate(p.Object.X+p.SpriteOffSetX, p.Object.Y+p.SpriteOffSetY)
 
 	img.DrawImage(sub.(*ebiten.Image), options)
+}
+
+func (p *Player) Depth() int {
+	return 0
 }
